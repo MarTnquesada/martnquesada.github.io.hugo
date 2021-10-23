@@ -7,6 +7,8 @@ mainSections = ["blog"]
 # disqusShortname = "example"
 paginate = 4
 
+ignoreErrors = ["error-missing-instagram-accesstoken"]
+
 [params]
   author = "Hugo de Groot"
   siteHeading = "Hugo Grotius" # defaults to author
