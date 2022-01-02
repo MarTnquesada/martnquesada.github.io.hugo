@@ -1,6 +1,6 @@
 ---
 title: ""
-date: 2020-06-01T16:16:24+02:00
+date: 2021-11-23T11:21:24+08:00
 draft: false
 menu:
   main:
@@ -8,23 +8,9 @@ menu:
     weight: 1
 ---
 
-{{<image float="right" width="11em" frame="true" caption="Portrait of me by Michiel Jansz. van Mierevelt" src="img/hugo-portrait.jpg" >}}
+{{<image float="right" width="14em" frame="true" caption="Me, lifting a cup of jujube tea." src="img/home-profile.jpg" >}}
 
-Hello, I'm Hugo Grotius and this is my personal page. I'm a Dutch lawyer and
-diplomat with experience from academia and government, having published a large
-number of books on international law, sometimes even being called the "father"
-of this field of study. I have experience working as a diplomat from serving as
-the Swedish Ambassdor to France. For a more comprehensive list of my experience,
-see the [Resume]({{< ref "resume.md" >}}) tab.
+Hi there, I'm Martín and this is my personal web thingy.
+I sometimes write about things that have caught my eye, most of which has to do with linguistics, computer science, both or neither.  
 
-After having been wrongfully convicted of treason in the Netherlands and
-being handed a life sentence, I managed to escape with the help of my dear
-wife Maria. She brought a chest of books to the prison where I was incarcerated
-(nothing out of the ordinary since I am an avid reader) which was then
-transported back out of the prison, with the the books replaced by yours truly!
-
-I have a small gallery of works of art depicting me under the [Gallery]({{< ref "hugo-gallery.md" >}}) tab.
-I regularly post lorem ipsum om my [Blog]({{< ref "blog/_index.md" >}}), and
-there are also examples of how to include images in the theme of the site.
-If you want to get in touch, you can find my social media links and email
-address under the [Contact]({{< ref "contact.md" >}}) tab.
+You can contact me through mquesadazaragoza@gmail.com or any of the social links in the [About Me]({{< ref "about_me.md" >}}) tab.

@@ -1,5 +1,6 @@
 +++
 author = "Hugo Authors"
+draft = true
 title = "Rich Content"
 date = "2019-03-10"
 description = "A brief description of Hugo Shortcodes"

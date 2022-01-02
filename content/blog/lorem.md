@@ -1,7 +1,7 @@
 ---
 title: "Lorem"
 date: 2020-06-01T16:09:23+02:00
-draft: false
+draft: true
 tags: [latin, dolor, test-tag]
 categories: [lorem]
 ---
