@@ -51,6 +51,11 @@ _Suzanna Sia (Johns Hopkins University)*; Kevin Duh (Johns Hopkins University)_
 
 The authors use prefix embeddings and lightweight fixed-parameter method to condition a large language model. Especially good for large models in few-shot cases. 
 
+##### G9: NVTC’s Transliteration Plug-in: What’s in a Name?
+_Jen Doyon and Ekaterina Harke, National Virtual Translation Center_
+
+Using automatic transliteration as support for MT systems for inteligence purposes. Problems and artifacts with different languages, mainly Arabic and (North) Korean, hahaha god damn really, is it because [REDACTED].  
+
 ##### UP10: A Multimodal Simultaneous Interpretation Prototype: Who Said What
 Multimodal SI system that presents users “who said what”. The system takes audio-visual approaches to recognize the speaker of each sentence, and then annotates its translation with the textual tag and face icon of the speaker, so that users can quickly understand the scenario.
 
