@@ -13,4 +13,4 @@ menu:
 Hi there, I'm Martín and this is my personal web thingy.
 I sometimes write about things that have caught my eye, most of which has to do with linguistics, computer science, both or neither.  
 
-You can contact me through mquesadazaragoza@gmail.com or any of the social links in the [About Me]({{< ref "about_me.md" >}}) tab.
+You can contact me through any of the social links in the [About Me]({{< ref "about_me.md" >}}) tab.
