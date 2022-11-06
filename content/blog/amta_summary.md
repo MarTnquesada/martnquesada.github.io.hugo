@@ -80,7 +80,7 @@ _Cecilia OL Yalangozian (Machine Translate)*; Vilém Zouhar (Charles University)
 
 Presentation of a non-profit called Machine Translation, hosted at [machinetranslate.org](https://machinetranslate.org/), a platform trying to provide open resources in the field and build a community for machine translation. I remembered to write it down here because I made a screenshot of the Spiderman meme from the slides. Sounded nice enough, seems like they are focused on providing a page with commonly asked questions about machine translation. Give them a visit or something.
 
-**_As an aside, I mistyped the name of the webpage and ended up at [machinetranslation.org](http://www.machinetranslation.org/). Looks like a page in Japanese about how people write hotel reviews. I honestly would like someone to tell me what the flying fuck is going on here, especially with that domain name. Maybe hosted by a university to use as an exercise in a machine translation course...? I'll come back with a new report if I manage to figure it out._**
+> As an aside, I mistyped the name of the webpage and ended up at [machinetranslation.org](http://www.machinetranslation.org/). Looks like a page in Japanese about how people write hotel reviews. I honestly would like someone to tell me what the flying fuck is going on here, especially with that domain name. Maybe hosted by a university to use as an exercise in a machine translation course...? I'll come back with a new report if I manage to figure it out.
 
 
 
