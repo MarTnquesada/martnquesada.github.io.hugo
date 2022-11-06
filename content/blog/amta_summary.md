@@ -12,7 +12,7 @@ Even though at the moment I am not enrolled in any course, he helped me with sev
 Since the event had a somewhat comfortable schedule for someone in Western Europe who finishes work early enough, and all talks where uploaded to the even page as soon as they finished I tried to attend and write down notes for as many presentations as possible.
 Lucky for you, that may be reading this anywhere from 2 months after the conference to infinity, you get to read my summary of this (likely) already outdated event! Some talks will be missing since I either did not find them interesting enough to write down anything or I forgot/skipped them. It ain't much, but it's honest work.
 
-#### G1: Machine Translation as a Prototype for Advanced AI Deployment in Government 
+##### G1: Machine Translation as a Prototype for Advanced AI Deployment in Government 
 _Speaker: Kathryn Baker (US Dept of Defense)_
 
 As the title suggests, it is about taking the deployment of MT models as an example for future AI oversight in the US. It shows instances where training data may breach constitutional rights, not be usable by the government itself, traceability issues, etc.
