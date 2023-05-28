@@ -1,9 +1,9 @@
 ---
 title: 'Taking a look at (some) tokenizers'
-date: 2023-06-05
+date: 2023-05-28
 Tags: [English]
 Categories: [article]
-draft: true
+draft: false
 ---
 
 Recently I have been working on writing a tokenizer from scratch in Rust. 
@@ -117,30 +117,52 @@ But enough literature, here's a breakdown of the implementation 🤓:
   - Again, it checks if the current span has special characters or other tokens not cached in the current vocabulary. If so, it includes them in the vocabulary using the `_tokenize` function.
   - Set the attribute `spacy` of the last character of `doc` to `True` if the last character of the string is a space and the penultimate character on it is not a space.
 
->  When we want to make this fast, get the data buffer once
-   with PyUnicode_AS_DATA, and then maintain a start_byte
-   and end_byte, so we can call hash64 directly. That way
-   we don't have to create the slice when we hit the cache.
+The check-chached-tokens step has this piece of comment in it 
+```
+# When we want to make this fast, get the data buffer once
+# with PyUnicode_AS_DATA, and then maintain a start_byte
+# and end_byte, so we can call hash64 directly. That way
+# we don't have to create the slice when we hit the cache.
+```
+
+Does not seem like it has been done because data buffer is still a string slice, and it's not using hash64. Something that anyone can add?
 
 ##### 2. Apply special cases
 
+> Retokenize the doc according to special cases
 
-You will have notices that SpaCy's tokenizer also has to deal with maintaining a vocabulary and an object with the information about the parsed spans
+- Find matches for special cases (with `_special_matcher.find_matches`) with and stores the results in `c_matches`. If there are no matches, the function finishes.
+- Filter special cases in `c_matches` with `_filter_special_spans`. This function checks if each span overlaps with previously seen tokens. If a span does not overlap, it is added to the filtered list. This filtering ensures that only non-overlapping spans are considered for modification.
+- The function calls the `_prepare_special_spans` method to prepare the special spans for modification. This method creates a dictionary `span_data` that contains information about each special span, such as its start index, end index, length difference, and the original text. It also determines whether modifications never increase doc length (`modify_in_place`).
+- If `modify_in_place` then do so, otherwise create a separate array to store modified tokens.
+- The `_retokenize_special_spans` method is called to modify the tokenization according to the filtered special cases. It copies the tokens from the document into the `tokens` array, adjusting the offsets if necessary.
+- Additional memory is allocated for the document if needed.
+- If modifications were not made in place, the modified tokens are copied back to the document.
+
+You will have noticed that SpaCy's tokenizer also has to deal with maintaining a vocabulary and an object with the information about the parsed spans.
+This tokenizer does not exist in a vacuum: SpaCy's intended use is to parse text and obtain a `Doc` object containing lots of information for each of the tokens, such as lemma, original form, lowercase...
+As a result, I do not exactly super like this tokenizer to exemplify how they generally work or use as a reference. 
+Much of the action is going on in `_prepare_special_spans` and `_retokenize_special_spans`, which I did not break down line-for-line like in Moses' case. It is already hard enough to read this text as it stands.
+
+And the reality of many tokenizers is that they exist as an accessory to a larger NLP suite, or they complement another tool like a sentence splitter, or a lemmatizer. 
+Often they are concerned with things other than throughput. Moses and SpaCy have pure rule-based tokenizers, arguably the most intuitive implementation of a tokenizer.
+However, HuggingFace's `transformers` library offers an array of tokenizers that are focused on subword tokenization, 
+be it through Byte-Pair Encoding or Wordpiece (Miko Schuster and Kaisuke Nakajima, 2012)[^fn1] or forego pretokenization entirely, like in the case of SentencePiece. 
+All of which are much better than rule-based tokenizers at generating smaller vocabularies that are less memory-hungry, a very important feature when working with large language models.
+
+The latter is especially useful for languages that do not use spaces to separate words,
+such as Chinese, Japanese and Thai. Moses is completely helpless for these languages, and SpaCy, for instance defaults to using SudachiPy (https://github.com/WorksApplications/SudachiPy) mode A for Japanese, 
+I am guessing because there is no convenient way to integrate parsing for Japanese into the standard flow. 
+In general any rule-based tokenizer is going to suffer and have to implement radically different logics for certain languages.
+Subword-based tokenizers (pure BPE, WordPiece, SentencePiece, etc.) are much more flexible and will do alright for pretty much any language.
+But their output is not suitable for many tasks that do **not** involve a large neural network. Is SentencePiece even tokenization when it's mostly concerned with producing a nice vocabulary?
+I had an full-blown existential crisis over this during my master's thesis that made me start a Rafa Nadal highlights loop and join my university's tennis classes the next day.
+Also an aside, BPE may be one of the most used misnomers in NLP. We all cite this paper (Sennrich et al., 2015)[^fn2]. But BPE, the _name_ was originally conceived as a basic data compression technique which operated by finding the most frequently occurring pairs of adjacent bytes in the data and replacing all instances of the pair with a byte that was not in the original data, repeating the process until no further compression is possible. 
+Yes, applied to text compression, this algorithm functions at the character level. But like, we should have given it some name. Now BPE is an NLP-only thing. Whatever.
 
 
-
-### Other
-Prob HuggingFace transformers tokenizer is quite used nowadays
-
-From https://huggingface.co/transformers/v3.4.0/tokenizer_summary.html 
+I have been thinking too much this afternoon. You get to decide what is and what is not tokenization. Bye.
 
 
-spaCy and Moses are two popular rule-based tokenizers. On the text above, they’d output something like:
-
-["Do", "n't", "you", "love", "🤗", "Transformers", "?", "We", "sure", "do", "."]
-Space/punctuation-tokenization and rule-based tokenization are both examples of word tokenization, which is splitting a sentence into words. While it’s the most intuitive way to separate texts in smaller chunks, it can have a problem when you have a huge corpus: it usually yields a very big vocabulary (the set of all unique tokens used). Transformer XL for instance uses space/punctuation-tokenization, and has a vocabulary size of 267,735!
-
-A huge vocabulary size means a huge embedding matrix at the start of the model, which will cause memory problems. TransformerXL deals with it by using a special kind of embeddings called adaptive embeddings, but in general, transformers models rarely have a vocabulary size greater than 50,000, especially if they are trained on a single language.
-
-
-
+[^fn1]: Japanese and Korean Voice Search - Miko Schuster and Kaisuke Nakajima - https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/37842.pdf
+[^fn2]: Neural Machine Translation of Rare Words with Subword Units - Rico Sennrich, Barry Haddow, Alexandra Birch - https://arxiv.org/pdf/1508.07909.pdf
