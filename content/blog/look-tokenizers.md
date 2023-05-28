@@ -13,20 +13,20 @@ tokenizers. Fun, I know.
 
 ### Moses Tokenizer 
 _Webpage http://www2.statmt.org/ and the implementation that I'll talk about 
-https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl._
+[tokenizer.perl](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl)._
 
 If you already know Moses, you know. Silent nod. For everyone else, Moses is an NLP framework written in Perl, focused on statistical machine translation. 
 It is super easy to install anywhere and everyone loves it because of it.
 Aside from language models and statistical machine translation utilities, it also includes tools to clean text, namely punctuation normalization, tokenization and cleaning corpora by limiting sentence length.
 From these I am concerned with the normalize-punctuation script and the tokenizer itself, because I don't remember ever **not** using punctuation normalization along with the tokenizer.
 
-The normalize-punctuation script (https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl
+The normalize-punctuation script ([normalize-punctuation.perl](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl)
 ) removes carriage return characters (`\r`) and normalizes spacing around parentheses and punctuation marks. 
 After that it normalizes punctuation marks (e.g. different types of quotation marks, hyphens and pseudo-spaces). 
 There are a few special cases, like `« »` being the de-facto quotes for French as indicated in the code, which are normalized to `" "`. This is also the case for Spanish, where English quotation marks are only supposed to be used in nested quotations (`«Gritó "NOOOOOOO" cuando le pidieron instalar Moses », dijo su antiguo supervisor`).
 
 
-Now let's go in depth about each step of the process in the tokenizer. Feel free to follow along with me, we are going to go through https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl. We start in line 227!
+Now let's go in depth about each step of the process in the tokenizer. Feel free to follow along with me, we are going to go through [tokenizer.perl](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl). We start in line 227!
 Right at the beginning there is an optional call to using Penn Treebank tokenization. Let's ignore this for now since it is a specific tokenization strategy not exclusive to Moses. 
 It used to be more popular, but I was born a little late to know exactly why I don't see it pop up much anywhere. Do you know?
 1. **Simple cleaning** (line 235-240):
@@ -83,7 +83,7 @@ Fortunately, he quickly came to his senses.
 
 
 ### SpaCy Tokenizer
-_Official page https://spacy.io/api/tokenizer and code that I will be referencing https://github.com/explosion/spaCy/tree/master_
+_Official page https://spacy.io/api/tokenizer.
 
 I happen to be very familiar with SpaCy because it is used in my workplace. 
 When it comes to text processing, especially tokenization or sentence segmentation, it is probably as good as they come.
@@ -91,7 +91,7 @@ Other than in cases where your use case is very specifically machine translation
 That said, like many other things in Python and SpaCy, it is slower than it could theoretically be, in spite of being implemented in Cython. And with very little parallelization. 
 But that's how we roll in NLP, and otherwise I quite like SpaCy because they gave me shiny stickers once.
 
-The root tokenizer in SpaCy is located here https://github.com/explosion/spaCy/blob/master/spacy/tokenizer.pyx. 
+The root tokenizer in SpaCy is located here [spacy/tokenizer.pyx](https://github.com/explosion/spaCy/blob/master/spacy/tokenizer.pyx). 
 Let's go over its lovely Cython code. The main tokenization function `__call__` is divided in two steps:
 
 ##### 1. Tokenize affixes
@@ -129,6 +129,7 @@ Does not seem like it has been done because data buffer is still a string slice,
 
 ##### 2. Apply special cases
 
+Described as:
 > Retokenize the doc according to special cases
 
 - Find matches for special cases (with `_special_matcher.find_matches`) with and stores the results in `c_matches`. If there are no matches, the function finishes.
