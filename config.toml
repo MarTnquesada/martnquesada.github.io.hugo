@@ -4,7 +4,7 @@ title = "Martín Quesada Zaragoza"
 theme = "notrack"
 newContentEditor = "nvim"
 mainSections = ["blog"]
-disqusShortname = "@disqus_gFqhMMdQQE"
+disqusShortname = "https-martnquesada-github-io"
 paginate = 4
 
 ignoreErrors = ["error-missing-instagram-accesstoken"]
