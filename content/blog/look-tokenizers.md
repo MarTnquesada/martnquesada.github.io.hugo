@@ -83,7 +83,7 @@ Fortunately, he quickly came to his senses.
 
 
 ### SpaCy Tokenizer
-_Official page https://spacy.io/api/tokenizer.
+_Official page https://spacy.io/api/tokenizer._
 
 I happen to be very familiar with SpaCy because it is used in my workplace. 
 When it comes to text processing, especially tokenization or sentence segmentation, it is probably as good as they come.
