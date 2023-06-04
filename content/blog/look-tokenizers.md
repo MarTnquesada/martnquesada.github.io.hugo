@@ -125,7 +125,7 @@ The check-chached-tokens step has this piece of comment in it
 # we don't have to create the slice when we hit the cache.
 ```
 
-Does not seem like it has been done because data buffer is still a string slice, and it's not using hash64. Something that anyone can add?
+It does not seem like it has been done because data buffer is still a string slice, and it's not using hash64. Something that anyone can add?
 
 ##### 2. Apply special cases
 
