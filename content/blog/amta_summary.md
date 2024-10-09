@@ -13,7 +13,7 @@ Since the event had a somewhat comfortable schedule for someone in Western Europ
 Lucky for you, that may be reading this anywhere from 2 months after the conference to infinity, you get to read my summary of this (likely) already outdated event! Some talks will be missing since I either did not find them interesting enough to write down anything or I forgot/skipped them. It ain't much, but it's honest work.
 
 ##### G1: Machine Translation as a Prototype for Advanced AI Deployment in Government 
-_Speaker: Kathryn Baker (US Dept of Defense)_
+_Kathryn Baker (US Dept of Defense)_
 
 As the title suggests, it is about taking the deployment of MT models as an example for future AI oversight in the US. It shows instances where training data may breach constitutional rights, not be usable by the government itself, traceability issues, etc.
 
@@ -37,6 +37,7 @@ To define the layout of the documents they use this tool that wasn't design by t
 
 ##### UP3: Post-editing of machine-translated patents: High tech with high stakes
 _Aaron Hebenstreit (Self-employed)_
+
 "In  this talk, real-world Chinese-to-English patent translations will be used in side-by-side comparisons of raw MT output and courtroom-ready products. The types of issues that can make or break a post-edited translation will be illustrated, with discussion of the principles underlying the error types. Certain nuances that challenge both humans and machines must be revealed in order to create a translation product that withstands the scrutiny of the   attorneys, scientists, and inventors who might procure it." 
 
 In some ways automatic translation is better than HT when translating patents because of technical but frequent words in a domain that are learnt by the MT system but not known by the translators. The speaker basically went over examples of different cases where MT and HT interact. 
@@ -80,7 +81,7 @@ _Cecilia OL Yalangozian (Machine Translate)*; Vilém Zouhar (Charles University)
 
 Presentation of a non-profit called Machine Translation, hosted at [machinetranslate.org](https://machinetranslate.org/), a platform trying to provide open resources in the field and build a community for machine translation. I remembered to write it down here because I made a screenshot of the Spiderman meme from the slides. Sounded nice enough, seems like they are focused on providing a page with commonly asked questions about machine translation. Give them a visit or something.
 
-> As an aside, I mistyped the name of the webpage and ended up at [machinetranslation.org](http://www.machinetranslation.org/). Looks like a page in Japanese about how people write hotel reviews. I honestly would like someone to tell me what the flying fuck is going on here, especially with that domain name. Maybe hosted by a university to use as an exercise in a machine translation course...? I'll come back with a new report if I manage to figure it out.
+> As an aside, I mistyped the name of the webpage and ended up at [machinetranslation.org](http://www.machinetranslation.org/). Looks like a page in Japanese about how people write hotel reviews. I honestly would like someone to tell me what is going on here, especially with that domain name. Maybe hosted by a university to use as an exercise in a machine translation course...? I'll come back with a new report if I manage to figure it out.
 
 
 

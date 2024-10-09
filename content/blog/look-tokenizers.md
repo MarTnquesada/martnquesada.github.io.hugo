@@ -23,7 +23,7 @@ From these I am concerned with the normalize-punctuation script and the tokenize
 The normalize-punctuation script ([normalize-punctuation.perl](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/normalize-punctuation.perl)
 ) removes carriage return characters (`\r`) and normalizes spacing around parentheses and punctuation marks. 
 After that it normalizes punctuation marks (e.g. different types of quotation marks, hyphens and pseudo-spaces). 
-There are a few special cases, like `« »` being the de-facto quotes for French as indicated in the code, which are normalized to `" "`. This is also the case for Spanish, where English quotation marks are only supposed to be used in nested quotations (`«Gritó "NOOOOOOO" cuando le pidieron instalar Moses », dijo su antiguo supervisor`).
+There are a few special cases, like `« »` being the de-facto quotes for French as indicated in the code, which are normalized to `" "`. This is also the case for Spanish, where English quotation marks are only supposed to be used in nested quotations (`«Gritó "NOOOOOOO" cuando le pidieron instalar Moses », explicó su antiguo supervisor`).
 
 
 Now let's go in depth about each step of the process in the tokenizer. Feel free to follow along with me, we are going to go through [tokenizer.perl](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/tokenizer/tokenizer.perl). We start in line 227!
