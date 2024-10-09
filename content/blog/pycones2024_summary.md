@@ -10,7 +10,7 @@ Categories: [article]
 Last week I went to Vigo to attend the Spanish PyCon, PyConES. I traveled there fully sponsored by Datamaran, the company that I work for.
 I attended as a speaker, since a colleague and I prepared a talk proposal that got accepted (something something ESG with clustering and LLM reformulation).
 
-## Day 1
+### Day 1 🌦
 
 The first day had only two turns for workshop tracks. I attended:
 
@@ -43,7 +43,7 @@ Throughout coding, he showed examples where langchain unnecessarily obscures cer
 Overall it was nice to listen to a measured critique, with specific examples and advocating for simpler code.
 
 
-## Day 2
+### Day 2 ⛈️
 
 The second day had a bunch of talks, but in my great wisdom I went to these:
 
@@ -91,7 +91,7 @@ _Anna Colom (The Data Tank)_
 The closing talk of the day (and the only one for that time slot) about present and future impacts of AI for the environment, society and politics. 
 Anna was nice, but I feel like you need someone who both has technical machine learning knowledge and is well-read in order to give this kind of talk, not the latter (like in this case).
 
-## Day 3
+### Day 3 🌧
 
 The last day, with fewer people, more rain, more food:
 
