@@ -27,7 +27,7 @@ Kind of interesting in the sense that I did not know about some of the formats/l
 Polars and pyarrow were generally pretty good over most file formats. Parquet had the potential to be also very fast in certain cases.
 Kiko mentioned so many times that performance "depends" on data and hardware that the whole room started answering each other's questions with "depends".
 
-They shared all the workshop materials in this repo [https://github.com/PyDataMallorca/PyConES2024_Superando_el_1brc_con_Python](https://github.com/PyDataMallorca/PyConES2024_Superando_el_1brc_con_Python). Beware: explanations in Spanish, variables in English, functions in Spanish. But like. You will probably understand it.
+They shared all the workshop materials in this [repo](https://github.com/PyDataMallorca/PyConES2024_Superando_el_1brc_con_Python). Beware: explanations in Spanish, variables in English, functions in Spanish. But like. You will probably understand it.
 
 
 ##### GenAI❤️f-string. Developing with Generative AI without Black Boxes
@@ -180,7 +180,7 @@ Data drift was also considered, for which they currently use the Python library 
 This presentation was nice too, but I never end up seeing explainability being automated so that it goes beyond a sample-by-sample study.
 When working with text models, it is very rare that you actually spot the issue in a couple of datapoints, I would rather aggregate the focal tokens and get a sense of how it looks for a large subset of samples.
 
-## Closing words
+### Closing words
 
 {{<image float="right" width="14em" frame="false" src="../img/blog/pycon_vigo.jpg" >}}
 
