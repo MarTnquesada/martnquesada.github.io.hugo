@@ -125,7 +125,7 @@ so I am not sure of why I went to this one. I recall them talking about the thre
 
 I do not remember much else, other than some questions about scheduled vs always-on streaming to reduce costs (that is, turning on the layers every once in a while since the streaming process continues from the last checkpoint).
 
-#### The Great Misinformation Tsunami: How Generative AI Can Help Us Win the Battle Against Fake News
+##### The Great Misinformation Tsunami: How Generative AI Can Help Us Win the Battle Against Fake News
 _Rubén Míguez, Agustín Cañas (Newtral)_
 
 This one was full of people, so much so that I had to stand next to the entrance door the whole time.
