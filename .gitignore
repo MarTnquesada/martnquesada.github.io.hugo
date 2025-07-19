@@ -3,6 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=hugo
 
 .idea/
+.DS_Store
 
 ### Hugo ###
 # Generated files by hugo
