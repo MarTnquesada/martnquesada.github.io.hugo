@@ -5,7 +5,8 @@ theme = "notrack"
 newContentEditor = "nvim"
 mainSections = ["blog"]
 disqusShortname = "https-martnquesada-github-io"
-paginate = 4
+[pagination]
+  pagerSize = 4
 
 ignoreErrors = ["error-missing-instagram-accesstoken"]
 
