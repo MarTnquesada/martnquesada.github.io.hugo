@@ -14,8 +14,7 @@ I attended as a speaker, since a colleague and I prepared a talk proposal that g
 
 The first day had only two turns for workshop tracks. I attended:
 
-##### Overcoming the One Billion Row Challenge with Python
-_Jordi Contestí, Kiko Correoso, Ernesto Coloma Rotger_
+##### Overcoming the One Billion Row Challenge with Python (Jordi Contestí, Kiko Correoso, Ernesto Coloma Rotger)
 
 This workshop showed different tools and approaches that can be used in Python to overcome the somewhat known [One Billion Rows Challenge](https://1brc.dev/).
 The data files themselves had about 50M lines, to avoid laptop oopsies, but the emphasis was on discussing and trying out different file formats and data manipulation frameworks in the attendants' hardware.
@@ -30,8 +29,7 @@ Kiko mentioned so many times that performance "depends" on data and hardware tha
 They shared all the workshop materials in this [repo](https://github.com/PyDataMallorca/PyConES2024_Superando_el_1brc_con_Python). Beware: explanations in Spanish, variables in English, functions in Spanish. But like. You will probably understand it.
 
 
-##### GenAI❤️f-string. Developing with Generative AI without Black Boxes
-_Alejandro Vidal_
+##### GenAI❤️f-string. Developing with Generative AI without Black Boxes (Alejandro Vidal)
 
 This workshop was about black boxes in _libraries around LLM inference, not the LLM architecture itself_, using langchain as the main example.
 The initial case was showing how hard it currently is to have visibility on what is the actual HTTP call being sent to the LLM API.
@@ -47,8 +45,7 @@ Overall it was nice to listen to a measured critique, with specific examples and
 
 The second day had a bunch of talks, but in my great wisdom I went to these:
 
-##### Building Resilient and Scalable Software with MLOps
-_Daniel Pérez Cabo (Alice Biometrics)_
+##### Building Resilient and Scalable Software with MLOps (Daniel Pérez Cabo from Alice Biometrics)
 
 Daniel works on Alice, an authentication service. He gave an overview of their ML pipelines, how they have evolved as of recent and common issues.
 Some key takeaways were (that is, whatever I remember, because I did not write down notes for this talk):
@@ -57,16 +54,14 @@ Some key takeaways were (that is, whatever I remember, because I did not write d
 - It was also mentioned that currently they re-deploy models transparently without changing anything in the app itself, only the model, so no app restart is needed.
 - He mentioned that they used a Python package called `petisco` (https://github.com/alice-biometrics/petisco) to manage the lifecycle of applications using hexagonal architecture, as well as abstracting away certain aspects of the overall architecture. It seems like it is an open-source library that they built.
 
-##### The Day that I Started to Develop All of My Webs in Python
-_Brais Moure (MoureDev)_
+##### The Day that I Started to Develop All of My Webs in Python (Brais Moure AKA MoureDev)
 
 I did not really know Brais, but it seems like he is somewhat of an influencer, or at least he has a decent following on social media.
 The talk was about `reflex` (https://reflex.dev/), which is a Python framework to create full webapps that wraps around FastAPI + React + Vue.
 He basically wanted to build webs using only Python coming from being a mobile-only developer, since Reflex declares components in Python to build the front of the webpage.
 
 
-##### Who Needs Data Having Distilabel?
-_Gabriel Martín Blázquez (HuggingFace)_
+##### Who Needs Data Having Distilabel? (Gabriel Martín Blázquez from HuggingFace)
 
 Disclaimer: I am very biased because I have collaborated with the Argilla team before, including Gabriel, and they are all very nice 🤗.
 
@@ -79,14 +74,12 @@ They have also made other nicer changes, but I don't remember them. I do recall 
 
 If Distilabel (or Argilla for that matter) sound interesting, I recommend giving them a look, and the team is very active in the HuggingFace discord.
 
-##### Sweet Introduction to Ruff
-_Elena M. Codonyer, Ángel Collado Aspas (Datamaran)_
+##### Sweet Introduction to Ruff (Elena M. Codonyer, Ángel Collado Aspas from Datamaran)
 
 Other two talented and good-looking colleagues of mine gave a talk about Ruff, a Python linter and formatter that we are now using across the company, and how it was introduced step-by-step to all teams.
 
 
-##### Less Hype and More Responsibility? Who Decides What in the Use of Data and AI
-_Anna Colom (The Data Tank)_
+##### Less Hype and More Responsibility? Who Decides What in the Use of Data and AI (Anna Colom from The Data Tank)
 
 The closing talk of the day (and the only one for that time slot) about present and future impacts of AI for the environment, society and politics. 
 Anna was nice, but I feel like you need someone who both has technical machine learning knowledge and is well-read in order to give this kind of talk, not the latter (like in this case).
@@ -95,8 +88,7 @@ Anna was nice, but I feel like you need someone who both has technical machine l
 
 The last day, with fewer people, more rain, more food:
 
-##### How Covid is Messing with Time Series Prediction and What to Do to Avoid It
-_Mireya, Jorge Raúl Gómez Sánchez (decide)_
+##### How Covid is Messing with Time Series Prediction and What to Do to Avoid It (Mireya, Jorge Raúl Gómez Sánchez from decide)
 
 This was a talk that I was originally not going to attend (instead I was going to go to another one about async in Python).
 But during the speakers dinner I talked with some people and the topic of Covid interacting with data came out as something that is still actually messing with not only time series prediction, but also training data from those years.
@@ -109,13 +101,11 @@ Depending on the case they use different components of the time series to "corre
 Overall I found it genuinely helpful to deal with Covid data, even if this was pretty much exclusively focused on time series.
 Also, discussing actual statistics was a nice break from the ML guessing game.
 
-##### Navigating the ESG landscape with LLMs
-_Vincent Rizzo, Martín Quesada Zaragoza (Datamaran)_
+##### Navigating the ESG landscape with LLMs (Vincent Rizzo, Martín Quesada Zaragoza from Datamaran)
 
 A very handsome Frenchman and an equally good-looking Spaniard gave out this insightful talk on doing funny clustering and LLM stuff with ESG disclosure for CSRD.
 
-##### Ensuring Data Quality with Databricks
-_Antonio, José Manuel García Giménez_
+##### Ensuring Data Quality with Databricks (Antonio, José Manuel García Giménez)
 
 I honestly have not touched Spark in many years and as a result I don't know much about Databricks, 
 so I am not sure of why I went to this one. I recall them talking about the three layers of data that they were working with:
@@ -125,8 +115,7 @@ so I am not sure of why I went to this one. I recall them talking about the thre
 
 I do not remember much else, other than some questions about scheduled vs always-on streaming to reduce costs (that is, turning on the layers every once in a while since the streaming process continues from the last checkpoint).
 
-##### The Great Misinformation Tsunami: How Generative AI Can Help Us Win the Battle Against Fake News
-_Rubén Míguez, Agustín Cañas (Newtral)_
+##### The Great Misinformation Tsunami: How Generative AI Can Help Us Win the Battle Against Fake News (Rubén Míguez, Agustín Cañas from Newtral)
 
 This one was full of people, so much so that I had to stand next to the entrance door the whole time.
 The popularity of the talk was probably due to both the theming and the company behind it, Newtral.
@@ -139,8 +128,7 @@ They were also working on a chatbot that could be publicly available,
 Other than that the presentation had a lot of statistics about the relative volume of fake news on social media, some stories, and high-level views of their pipelines.
 They also showed a slide of their tech stack that left me confused because it had a hundred things on it, many of which one would think that overlap with each other. With MongoDB-Postgres-MariaDB-RedShift-ElasticSearch-MySQL they sure do have some databases. 
 
-##### Workflows with AI agents and Python
-_Manuel Díaz, Borja Esteve Molner, Rafael Mena-Yedra (decide)_
+##### Workflows with AI agents and Python (Manuel Díaz, Borja Esteve Molner, Rafael Mena-Yedra from decide)
 
 They introduced 3 techniques from 3 different papers that are relevant to the presentation:
 - **Chain-of-thought prompting** (Chain of Thought Prompting Elicits Reasoning in Large Language Models, Wei J.,et al. 2022).
@@ -162,8 +150,7 @@ They shared a repo with the examples and the slides [here](https://github.com/ra
 Nice presentation overall, although just like with most things around LLMs that are not the actual model architectures, LLM agents are a simpler concept than I originally expected.
 
 
-##### The power of observability in machine learning 
-_Sara, Christian Carballo Lozano_
+##### The power of observability in machine learning (Sara, Christian Carballo Lozano)
 
 Sara and Christian talked about some issues with model management, namely generalization issues and model drifting.
 
