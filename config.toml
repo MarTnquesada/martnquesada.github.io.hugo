@@ -32,3 +32,8 @@ ignoreErrors = ["error-missing-instagram-accesstoken"]
 
 [permalinks]
   blog = "/blog/:year/:month/:slug"
+
+[markup]
+  [markup.highlight]
+    style = "github" 
+    codeFences = true

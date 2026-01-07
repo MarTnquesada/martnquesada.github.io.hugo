@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------
+   1) Site-wide changes: Align text left, justify, better word wrapping, add separation between blog posts 
+   ------------------------------------------------------ */
+
+p,
+li,
+blockquote {
+  /* Never stretch lines just to justify text */
+  text-align: left;
+  text-justify: auto;
+
+  /* Allow long words/URLs to break instead of expanding gaps */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Put a line before every article except the first one */
+main article + article {
+  border-top: 1px solid #ddd;   
+  margin-top: 1.0rem;
+  padding-top: 1.0rem;
+}
+
+/* Center code blocks as a box, keep text left-aligned */
+pre,
+pre code {
+  max-width: 40rem;        /* adjust width to taste */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------------------------------------------------------
+   2) Large-screen-only tweaks (vanilla Hugo looks decent on mobile)
+   ------------------------------------------------------ */
+
+@media (min-width: 1024px) {
+  /* Slightly smaller font size */
+  body {
+    font-size: 1.2rem; 
+  }
+
+  /* Use more lateral space */
+  main,
+  .main,
+  .content,
+  .container,
+  .wrapper,
+  .post,
+  .post-content {
+    max-width: 62rem;    
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

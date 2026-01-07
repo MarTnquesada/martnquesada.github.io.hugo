@@ -7,8 +7,7 @@ menu:
     weight: 255
 ---
 
-<!--- {{< contact-box >}} --->
-
+<!-- - {{< contact-box >}} - -->
 
 Well met! I am Martín, if the large web header has not given that away already.
 I work mostly as a data scientist / ML Engineer (what are job descriptions in tech?), and I am specialized in natural language processing.
@@ -25,6 +24,7 @@ Proceedings of the 15th biennial conference of the Association for Machine Trans
 - [Translating Knowledge Representations with Monolingual Word Embeddings: the Case of a Thesaurus on Corporate Non-Financial Reporting](https://aclanthology.org/2020.computerm-1.3/) - Proceedings of the 6th International Workshop on Computational Terminology · May 1, 2020
 
 
+{{<image float="center" width="14em" frame="true" caption="Me, lifting a cup of jujube tea." src="img/home-profile.jpg" >}}
 
 
 {{< social >}}
