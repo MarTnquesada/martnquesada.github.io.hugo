@@ -61,8 +61,10 @@ vllm serve Qwen/Qwen3-8B-FP8 --port 8080
 But I have a magnificent Apple Silicon machine and I need to rely on Metal, so I can't do that. Instead, I will use llama.cpp with a GGUF-format quantized model:  
 
 ```bash
-# Download your GGUF quantization of choice, I am using the q4 quantization
-uvx hf download Qwen/Qwen3-8B-GGUF Qwen3-8B-Q4_K_M.gguf --local-dir ./models
+# Download your GGUF quantization of choice
+uvx hf download \ 
+    Qwen/Qwen3-8B-GGUF Qwen3-8B-Q4_K_M.gguf \
+    --local-dir ./models
 
 llama-server \
     -m ./models/qwen3-8b-q4_k_m.gguf \
@@ -101,7 +103,8 @@ def my_metric:
     if true_positive:
             score = tp_reward
             feedback = (
-                f"✅ Correct: '{sample_raw}'. Keep in mind the following cues" 
+                f"✅ Correct: '{sample_raw}'. "
+                "Keep in mind the following cues" 
                 "for positive samples: ..."            )
     elif true_negative: 
         ...
