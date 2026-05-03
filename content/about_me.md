@@ -15,6 +15,7 @@ I work mostly as a data scientist / ML Engineer (what are job descriptions in te
 If you wish to contact me, please do it through email, at mquesadazaragoza@gmail.com.
 
 **Things I have made that you may want to use:**
+- [comsat.nvim](https://github.com/MarTnquesada/comsat.nvim), a simple Neovim buffer buffer menu that lets you hotkey buffers and selection groups.
 - [Tokenaisu](https://github.com/MarTnquesada/tokenaisu), a collection of tokenizers made _fast_.
 
 **Publications:**
